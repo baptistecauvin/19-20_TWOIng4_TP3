@@ -12,20 +12,20 @@ function start() {
       const data = response.data;
 
       // On récupère l'information principal
-      const main = data.weather[0].main;
-      const description = data.weather[0].description;
-      const temp = data.main.temp;
-      const icon = apiWeather.getHTMLElementFromIcon(data.weather[0].icon);
+      const main = data.list[0].weather[0].main;
+      const description = data.list[0].weather[0].description;
+      const temp = data.list[0].temp.day;
+      const icon = apiWeather.getHTMLElementFromIcon(data.list[0].weather[0].icon);
 
-      const main1 = data.weather[1].main;
-      const description1 = data.weather[1].description;
-      const temp1 = data.main.temp;
-      const icon1 = apiWeather.getHTMLElementFromIcon(data.weather[1].icon);
+      const main1 = data.list[1].weather[0].main;
+      const description1 = data.list[1].weather[0].description;
+      const temp1 = data.list[1].temp.day;
+      const icon1 = apiWeather.getHTMLElementFromIcon(data.list[1].weather[0].icon);
 
-      const main2 = data.weather[2].main;
-      const description2 = data.weather[2].description;
-      const temp2 = data.main.temp;
-      const icon2 = apiWeather.getHTMLElementFromIcon(data.weather[2].icon);
+      const main2 = data.list[2].weather[0].main;
+      const description2 = data.list[2].weather[0].description;
+      const temp2 = data.list[2].temp.day;
+      const icon2 = apiWeather.getHTMLElementFromIcon(data.list[2].weather[0].icon);
 
       // Modifier le DOM
       document.getElementById('today-forecast-main').innerHTML = main;
@@ -61,21 +61,21 @@ function start(city) {
       // Récupère la donnée d'une API
       const data = response.data;
 
-       // On récupère l'information principal
-      const main = data.weather[0].main;
-      const description = data.weather[0].description;
-      const temp = data.main.temp;
-      const icon = apiWeather.getHTMLElementFromIcon(data.weather[0].icon);
+      // On récupère l'information principal
+      const main = data.list[0].weather[0].main;
+      const description = data.list[0].weather[0].description;
+      const temp = data.list[0].temp.day;
+      const icon = apiWeather.getHTMLElementFromIcon(data.list[0].weather[0].icon);
 
-      const main1 = data.weather[1].main;
-      const description1 = data.weather[1].description;
-      const temp1 = data.main.temp;
-      const icon1 = apiWeather.getHTMLElementFromIcon(data.weather[1].icon);
+      const main1 = data.list[1].weather[0].main;
+      const description1 = data.list[1].weather[0].description;
+      const temp1 = data.list[1].temp.day;
+      const icon1 = apiWeather.getHTMLElementFromIcon(data.list[1].weather[0].icon);
 
-      const main2 = data.weather[2].main;
-      const description2 = data.weather[2].description;
-      const temp2 = data.main.temp;
-      const icon2 = apiWeather.getHTMLElementFromIcon(data.weather[2].icon);
+      const main2 = data.list[2].weather[0].main;
+      const description2 = data.list[2].weather[0].description;
+      const temp2 = data.list[2].temp.day;
+      const icon2 = apiWeather.getHTMLElementFromIcon(data.list[2].weather[0].icon);
 
       // Modifier le DOM
       document.getElementById('today-forecast-main').innerHTML = main;
@@ -83,12 +83,12 @@ function start(city) {
       document.getElementById('icon-weather-container').innerHTML = icon;
       document.getElementById('today-forecast-temp').innerHTML = `${temp}°C`;
 
-       document.getElementById('test-forecast-main').innerHTML = main1;
+      document.getElementById('test-forecast-main').innerHTML = main1;
       document.getElementById('test-forecast-more-info').innerHTML = description1;
       document.getElementById('test-weather-container').innerHTML = icon1;
       document.getElementById('test-forecast-temp').innerHTML = `${temp1}°C`;
 
-       document.getElementById('test2-forecast-main').innerHTML = main2;
+      document.getElementById('test2-forecast-main').innerHTML = main2;
       document.getElementById('test2-forecast-more-info').innerHTML = description2;
       document.getElementById('test2-weather-container').innerHTML = icon2;
       document.getElementById('test2-forecast-temp').innerHTML = `${temp2}°C`;
