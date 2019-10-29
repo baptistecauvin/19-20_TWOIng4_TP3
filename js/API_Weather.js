@@ -31,6 +31,7 @@ class API_WEATHER{
     })
   }
 
+//Fonction pour avoir les 3 prochain jours, utilisant le nouvel API
   getThreeDayForecast(){
     return axios
     .get(`${API_URL_TEST}?q=${this.city}&units=metric&cnt=4&appid=${API_KEY}`, {
